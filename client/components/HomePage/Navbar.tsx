@@ -1,154 +1,60 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import '../main.scss'
+import { FaHome, FaUser, FaList, FaBriefcase, FaComments } from 'react-icons/fa' // Importing icons from react-icons
 
 function NavLinks() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768)
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(false) // Close the menu on large screens
-      }
-    }
-
-    window.addEventListener('resize', handleResize)
-    handleResize() // Initial check
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   return (
-    <nav className="relative flex items-center">
-      {/* Toggle Button for Mobile */}
-      {!isDesktop && (
-        <button
-          onClick={toggleMenu}
-          className="mr-4 text-white focus:outline-none md:hidden"
-        >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+    <aside className="aside fixed left-0 top-0 z-20 h-full w-[250px] bg-gray-800 text-white ">
+      <div className="logo py-6 text-center">
+        <a href="#">
+          <span>G</span>apson
+        </a>
+      </div>
+      <div className="nav-toggle">
+        <span></span>
+      </div>
+      <ul className="mt-10 space-y-6">
+        <li>
+          <a
+            href="#"
+            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-      )}
-
-      {/* Mobile Menu */}
-      {!isDesktop && isMenuOpen && (
-        <div className="absolute right-0 top-12 z-50 w-48 rounded-lg bg-blue-950 shadow-lg">
-          <ul className="flex flex-col items-start space-y-2 px-2 py-4 text-sm">
-            <li>
-              <Link
-                to="/"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about-us"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/our-programs"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Our Programs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/our-partners"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Our Partners
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/get-involved"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Get Involved
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
-
-      {/* Desktop Menu */}
-      {isDesktop && (
-        <div className="ml-auto flex space-x-6 text-base">
-          <Link to="/" className="font-semibold text-white hover:text-blue-500">
-            Home
-          </Link>
-          <Link
-            to="/about-us"
-            className="font-semibold text-white hover:text-blue-500"
+            <FaHome /> <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
           >
-            About
-          </Link>
-          <Link
-            to="/our-programs"
-            className="font-semibold text-white hover:text-blue-500"
+            <FaUser /> <span>About Me</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
           >
-            Programs
-          </Link>
-          <Link
-            to="/our-partners"
-            className="font-semibold text-white hover:text-blue-500"
+            <FaList /> <span>Services</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
           >
-            Partners
-          </Link>
-          <Link
-            to="/get-involved"
-            className="font-semibold text-white hover:text-blue-500"
+            <FaBriefcase /> <span>Portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
           >
-            Get Involved
-          </Link>
-          <Link
-            to="/contact"
-            className="font-semibold text-white hover:text-blue-500"
-          >
-            Contact
-          </Link>
-        </div>
-      )}
-    </nav>
+            <FaComments /> <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
   )
 }
 
