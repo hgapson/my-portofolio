@@ -3,8 +3,8 @@ import { FaHome, FaUser, FaList, FaBriefcase, FaComments } from 'react-icons/fa'
 
 function NavLinks() {
   return (
-    <aside className="aside fixed left-0 top-0 z-20 h-full w-[250px] bg-gray-800 text-white ">
-      <div className="logo py-6 text-center">
+    <div className="aside">
+      <div className="logo">
         <a href="#">
           <span>G</span>apson
         </a>
@@ -12,49 +12,34 @@ function NavLinks() {
       <div className="nav-toggle">
         <span></span>
       </div>
-      <ul className="mt-10 space-y-6">
+      <ul>
         <li>
-          <a
-            href="#"
-            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
-          >
-            <FaHome /> <span>Home</span>
+          <a href="#" className="active">
+            <i className="fa fa-home"></i>Home
           </a>
         </li>
         <li>
-          <a
-            href="#"
-            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
-          >
-            <FaUser /> <span>About Me</span>
+          <a href="#">
+            <i className="fa fa-user"></i>About Me
           </a>
         </li>
         <li>
-          <a
-            href="#"
-            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
-          >
-            <FaList /> <span>Services</span>
+          <a href="#">
+            <i className="fa fa-list"></i>Services
           </a>
         </li>
         <li>
-          <a
-            href="#"
-            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
-          >
-            <FaBriefcase /> <span>Portfolio</span>
+          <a href="#">
+            <i className="fa fa-briefcase"></i>Portofolio
           </a>
         </li>
         <li>
-          <a
-            href="#"
-            className="flex items-center space-x-3 rounded px-6 py-2 text-gray-300 hover:bg-gray-700 hover:text-indigo-400"
-          >
-            <FaComments /> <span>Contact</span>
+          <a href="#">
+            <i className="fa fa-comments"></i>Contact
           </a>
         </li>
       </ul>
-    </aside>
+    </div>
   )
 }
 
