@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <div className="main-container">
+    <div className=" home main-container">
       {/* Sidebar */}
       <Aside isActive={isAsideActive} toggleAside={toggleAside} />
 

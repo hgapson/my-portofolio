@@ -35,5 +35,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+.home {
+  margin-left: 350px; /* Ensure space for the Aside component */
+  position: relative; /* Or static based on layout */
+  z-index: 1; /* Lower than Aside */
+  /* Other styles */
+}
 /* Additional global styles can go here */

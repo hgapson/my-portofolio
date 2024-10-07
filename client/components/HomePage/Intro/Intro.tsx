@@ -5,10 +5,10 @@ import profileImage from '../../public/swas160 gapson-NZ Passport-35x45 mm.jpg' 
 
 const Home = () => {
   return (
-    <section className="home section">
+    <section className="section">
       <div className="container">
-        <div className="row">
-          <div className="home-info padd-15">
+        <div className="row flex flex-col md:flex-row">
+          <div className="home-info padd-15 md:w-1/2">
             <h3 className="hello">
               Hello, my name is <span className="name">Credu Gapson</span>
             </h3>
@@ -23,8 +23,12 @@ const Home = () => {
               Hire me
             </a>
           </div>
-          <div className="home-image padd-15">
-            <img src={profileImage} alt="Gapson" />
+          <div className="home-image padd-15 flex justify-center md:w-1/2">
+            <img
+              src={profileImage}
+              alt="Gapson"
+              className="h-auto max-w-full"
+            />
           </div>
         </div>
       </div>

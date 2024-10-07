@@ -17,7 +17,7 @@ const EducationExperience = () => {
   ]
 
   return (
-    <div className="education-experience">
+    <div className="education-experience flex">
       <div className="education padd-15">
         <h3 className="title">Education</h3>
         <div className="row">

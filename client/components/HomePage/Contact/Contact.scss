@@ -2,6 +2,8 @@
 
 .contact {
   /* Other styles */
+  position: relative; /* or static, depending on your layout */
+  z-index: 1; 
 
   .contact-title {
     color: var(--skin-color);

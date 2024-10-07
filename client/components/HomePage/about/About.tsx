@@ -26,8 +26,8 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="row">
-              <div className="personal-info padd-15">
+            <div className="flex flex-col md:flex-row">
+              <div className="personal-info padd-15 md:w-1/2">
                 <div className="row">
                   <div className="info-item padd-15">
                     <p>
@@ -56,7 +56,8 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="skills padd-15">
+
+              <div className="skills padd-15 md:w-1/2">
                 <div className="row">
                   <div className="skill-item padd-15">
                     <h5>React JS</h5>
@@ -131,6 +132,7 @@ const About = () => {
                 </div>
               </div>
             </div>
+
             <div className="row">
               <div className="education padd-15">
                 <h3 className="title">Education</h3>
