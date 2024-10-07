@@ -1,0 +1,29 @@
+/* src/styles/variables.scss */
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --skin-color: #ec1818;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+/* src/styles/variables.scss */
+:root {
+  --skin-color: #ec1818;
+}
+
+/* src/components/Aside/Aside.scss */
+.aside {
+  background-color: var(--bg-black-100);
+  /* ... */
+}
+
+.aside .logo a {
+  color: var(--text-black-900);
+  /* ... */
+}
+
+.aside ul li a.active {
+  color: var(--skin-color);
+}

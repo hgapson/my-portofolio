@@ -1,0 +1,143 @@
+/* src/components/Aside/Aside.scss */
+
+.aside {
+  width: 270px;
+  background: var(--bg-black-100);
+  position: fixed;
+  left: 0;
+  padding: 30px;
+  top: 0;
+  height: 100%;
+  border-right: 1px solid var(--bg-black-50);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 1199px) {
+    transform: translateX(-100%);
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 50px;
+    text-transform: capitalize;
+    font-size: 30px;
+
+    a {
+      color: var(--text-black-900);
+      font-weight: 700;
+      padding: 15px 20px;
+      font-size: 30px;
+      letter-spacing: 5px;
+      position: relative;
+
+      span {
+        font-family: 'Clicker Script', cursive;
+        font-size: 40px;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 5px solid var(--skin-color);
+      }
+
+      &::before {
+        border-bottom: 5px solid var(--skin-color);
+        border-left: 5px solid var(--skin-color);
+        bottom: 0;
+        left: 0;
+      }
+
+      &::after {
+        border-top: 5px solid var(--skin-color);
+        border-right: 5px solid var(--skin-color);
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .nav-toggle {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 270px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+
+    span {
+      height: 2px;
+      width: 18px;
+      background: var(--skin-color);
+      display: inline-block;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        height: 2px;
+        width: 18px;
+        background: var(--skin-color);
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      display: flex;
+    }
+  }
+
+  ul {
+    margin-top: 50px;
+    width: 100%;
+
+    li {
+      margin-bottom: 20px;
+      display: block;
+
+      a {
+        font-size: 16px;
+        font-weight: 600;
+        display: block;
+        border-bottom: 1px solid var(--bg-black-50);
+        color: var(--text-black-900);
+        padding: 5px 15px;
+        transition: color 0.3s ease;
+
+        &.active,
+        &:hover {
+          color: var(--skin-color);
+        }
+
+        i {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

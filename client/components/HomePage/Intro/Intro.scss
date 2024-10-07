@@ -1,0 +1,88 @@
+/* src/components/Home/Home.scss */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+  align-items: center;
+  padding: 30px 0;
+
+  .home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+
+    @media (max-width: 991px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .hello {
+      font-size: 28px;
+      margin: 15px 0;
+
+      span.name {
+        font-family: 'Clicker Script', cursive;
+      }
+    }
+
+    .my-profession {
+      font-size: 30px;
+      margin: 15px 0;
+
+      .typing {
+        color: var(--skin-color);
+      }
+    }
+
+    p.font-serif {
+      margin-bottom: 70px;
+      font-size: 20px;
+      color: var(--text-black-700);
+    }
+
+    .btn.hire-me {
+      /* Additional styles if needed */
+    }
+  }
+
+  .home-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      border: 10px solid var(--skin-color);
+    }
+
+    &::after {
+      border-bottom: 10px solid var(--skin-color);
+      border-right: 10px solid var(--skin-color);
+      right: 90px;
+      bottom: 20px;
+    }
+
+    &::before {
+      border-top: 10px solid var(--skin-color);
+      border-left: 10px solid var(--skin-color);
+      left: 0px;
+      top: -20px;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}

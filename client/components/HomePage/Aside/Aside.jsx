@@ -1,7 +1,9 @@
-import '../main.scss'
-import { FaHome, FaUser, FaList, FaBriefcase, FaComments } from 'react-icons/fa' // Importing icons from react-icons
+// src/components/Aside/Aside.js
+import React from 'react'
+import './Aside.scss'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
-function NavLinks() {
+const Aside = () => {
   return (
     <div className="aside">
       <div className="logo">
@@ -30,7 +32,7 @@ function NavLinks() {
         </li>
         <li>
           <a href="#">
-            <i className="fa fa-briefcase"></i>Portofolio
+            <i className="fa fa-briefcase"></i>Portfolio
           </a>
         </li>
         <li>
@@ -43,4 +45,4 @@ function NavLinks() {
   )
 }
 
-export default NavLinks
+export default Aside

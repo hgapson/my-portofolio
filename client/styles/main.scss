@@ -1,0 +1,39 @@
+/* src/styles/main.scss */
+
+@import './variables.scss';
+
+/* Import component SCSS files */
+@import '../components//HomePage/Aside/Aside.scss';
+@import '../components/HomePage/Intro/Intro.scss';
+@import '../components/HomePage/about/About.scss';
+@import '../components/HomePage/Services/Services.scss';
+@import '../components/HomePage/Portfolio/Portfolio.scss';
+@import '../components/HomePage/Contact/Contact.scss';
+@import '../components/HomePage/StyleSwitcher/Switcher.scss';
+@import '../components/HomePage/EducExp/Educ.scss';
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-black-900);
+  color: var(--text-black-900);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Additional global styles can go here */

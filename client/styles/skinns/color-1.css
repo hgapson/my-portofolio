@@ -1,0 +1,7 @@
+/* src/styles/themes/color-1.scss */
+
+:root {
+  --skin-color: #ec1839;
+  --skin-color-dark: #630516; /* 10% darker than #ec1839 */
+  /* Add other CSS variables specific to color-1 theme */
+}
