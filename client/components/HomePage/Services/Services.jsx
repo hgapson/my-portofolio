@@ -44,14 +44,14 @@ const Services = () => {
   ]
 
   return (
-    <section className="service section">
+    <section className="service section mt-20">
       <div className="container">
         <div className="row">
           <div className="section-title padd-15">
             <h2>Services</h2>
           </div>
         </div>
-        <div className="row">
+        <div className="row py-16">
           {services.map((service, index) => (
             <div className="service-item padd-15" key={index}>
               <div className="service-item-inner">

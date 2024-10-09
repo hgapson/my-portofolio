@@ -16,7 +16,7 @@ const Aside = () => {
       </div>
       <ul>
         <li>
-          <a href="#" className="active">
+          <a href="#" className="active ">
             <i className="fa fa-home"></i>Home
           </a>
         </li>

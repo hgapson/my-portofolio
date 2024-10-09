@@ -4,10 +4,10 @@ import './About.scss'
 
 const About = () => {
   return (
-    <section className="about section">
+    <section className="about section mt-16">
       <div className="container">
         <div className="row">
-          <div className="section-title padd-15">
+          <div className="section-title padd-15 py-16">
             <h2>About Me</h2>
           </div>
         </div>
